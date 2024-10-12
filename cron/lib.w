@@ -41,7 +41,7 @@ pub class CronJob {
       ScheduleExpression: cronExpression ?? existingRule.ScheduleExpression,
       State: existingRule.State,
       Description: existingRule.Description ?? "Updated",
-      EventPattern: pkg != nil ? Json { "detail": pkg } : existingRule.EventPattern
+      EventPattern: CronJob.setEventPattern(existingRule.EventPattern, pkg)
     };
 
     let ruleArn = cron.CronManager.updateCronRule(updatedRule);
@@ -62,5 +62,13 @@ pub class CronJob {
 
   pub inflight listJobs(): Array<cron.CronRule> {
     return cron.CronManager.listCronRules();
+  }
+
+  static inflight setEventPattern(pattern: Json, pkg: Json?): Json {
+    if let pkg = pkg {
+      return Json { "detail": pkg };
+    } else {
+      return pattern;
+    }
   }
 }

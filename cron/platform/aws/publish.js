@@ -1,13 +1,11 @@
-const { EventBridgeClient, PutRuleCommand, DeleteRuleCommand, ListRulesCommand, GetRuleCommand } = require("@aws-sdk/client-eventbridge");
+const { EventBridgeClient, PutRuleCommand, DeleteRuleCommand, ListRulesCommand } = require("@aws-sdk/client-eventbridge");
 
 const client = new EventBridgeClient();
 
 const _getCronRule = async (ruleName) => {
-  const command = new GetRuleCommand({
-    Name: ruleName,
-  });
+  const command = new ListRulesCommand({});
   const response = await client.send(command);
-  return response.Rule;
+  return response.Rules.find(rule => rule.Name === ruleName);
 }
 
 const _createCronRule = async (rule) => {

@@ -7,10 +7,16 @@
     "url": "https://github.com/winglang/winglibs.git",
     "directory": "cron"
   },
+  "license": "MIT",
   "wing": {
     "platforms": [
       "sim"
     ]
   },
-  "license": "MIT"
+  "peerDependencies": {
+    "@aws-sdk/client-eventbridge": "^3.525.0",
+    "@cdktf/provider-aws": "^19.12.0",
+    "aws-cdk-lib": "^2.109.0",
+    "cdktf": "^0.20.6"
+  }
 }
