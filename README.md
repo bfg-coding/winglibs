@@ -18,6 +18,7 @@ publishing them for you.
 | [cloudv2](./cloudv2) | [@winglibs/cloudv2](https://www.npmjs.com/package/@winglibs/cloudv2) | sim, tf-aws |
 | [cognito](./cognito) | [@winglibs/cognito](https://www.npmjs.com/package/@winglibs/cognito) | sim, tf-aws |
 | [containers](./containers) | [@winglibs/containers](https://www.npmjs.com/package/@winglibs/containers) | sim, tf-aws |
+| [cron](./cron) | [@winglibs/cron](https://www.npmjs.com/package/@winglibs/cron) | sim |
 | [dynamodb](./dynamodb) | [@winglibs/dynamodb](https://www.npmjs.com/package/@winglibs/dynamodb) | sim, tf-aws |
 | [email](./email) | [@winglibs/email](https://www.npmjs.com/package/@winglibs/email) | sim, tf-aws |
 | [eventbridge](./eventbridge) | [@winglibs/eventbridge](https://www.npmjs.com/package/@winglibs/eventbridge) | awscdk, sim, tf-aws |

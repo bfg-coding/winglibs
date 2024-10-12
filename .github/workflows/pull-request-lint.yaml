@@ -30,6 +30,7 @@ jobs:
             cloudv2
             cognito
             containers
+            cron
             dynamodb
             email
             eventbridge
